@@ -7,7 +7,7 @@ fn main() -> std::io::Result<()> {
     let mut stream = TcpStream::connect(addr)?;
     println!("connected to {addr}");
 
-    for i in 0..10u64 {
+    for i in 0..10000u64 {
         let now = SystemTime::now();
         let sent_nanos: u64 = now
             .duration_since(UNIX_EPOCH)
